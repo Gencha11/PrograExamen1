@@ -1,0 +1,68 @@
+﻿@page
+@model WebApp.Pages.Titulos.TitulosGridModel
+@{
+}
+
+<div class="container">
+
+    <div class="card">
+        <div class="card-header">
+            Titulos
+        </div>
+        <div class="card-body">
+
+            <a class="btn btn-outline-primary" asp-page="Edit">
+                <i class='bx bxs-add-to-queue'></i>
+            </a>
+
+            <div class="row">
+                <div class="col-12">
+                    <table id="GridView" class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Descripción</th>
+                                <th>Estado</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.TitulosGridList)
+                            {
+                                <tr>
+                                    <td>@item.Id_Titulo</td>
+                                    <td>@item.Descripcion</td>
+                                    <td>@(item.Estado ? "Activo": "Inactivo")</td>
+                                    <td>
+                                        <a class="btn btn-outline-primary" asp-page="Edit" asp-route-id="@item.Id_Titulo">
+                                            <i class='bx bxs-edit'></i>
+                                        </a>
+
+                                        <button type="button" class="btn btn-outline-primary"
+                                                onclick="TitulosGrid.OnClickEliminar(@item.Id_Titulo)">
+                                            <i class='bx bx-trash'></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+
+
+    <script>
+        var MensajeApp = "@Html.Raw(Model.Mensaje)";
+    </script>
+
+    <script defer src="~/App/Titulos/TitulosGrid.js"></script>
+}
