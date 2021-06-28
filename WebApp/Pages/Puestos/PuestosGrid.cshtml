@@ -11,7 +11,7 @@
         </div>
         <div class="card-body">
 
-            <a class="btn btn-outline-primary" asp-page="Edit">
+            <a class="btn btn-outline-primary" asp-page="PuestosEdit">
                 <i class='bx bxs-add-to-queue'></i>
             </a>
 
@@ -36,7 +36,7 @@
                                     <td>@item.Salario</td>
                                     <td>@(item.Estado ? "Activo": "Inactivo")</td>
                                     <td>
-                                        <a class="btn btn-outline-primary" asp-page="Edit" asp-route-id="@item.Id_Puesto">
+                                        <a class="btn btn-outline-primary" asp-page="PuestosEdit" asp-route-id="@item.Id_Puesto">
                                             <i class='bx bxs-edit'></i>
                                         </a>
 

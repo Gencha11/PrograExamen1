@@ -6,6 +6,14 @@ var TitulosGrid;
             icon: "success", title: MensajeApp
         });
     }
+    function OnClickEliminar(id) {
+        ComfirmAlert("Desea eliminar este registro?", "Eliminar", "warning", "#3085d6", "d33").then(function (result) {
+            if (result.isConfirmed) {
+                window.location.href = "Titulos/TitulosGrid?handler=Eliminar&id=" + id;
+            }
+        });
+    }
+    TitulosGrid.OnClickEliminar = OnClickEliminar;
     $("#GridView").DataTable();
 })(TitulosGrid || (TitulosGrid = {}));
 //# sourceMappingURL=TitulosGrid.js.map

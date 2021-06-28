@@ -87,6 +87,7 @@ namespace WBL
             {
                 var result = sql.ExecuteAsync("DepartamentosActualizar", new
                 {
+                    entity.Id_Departamento,
                     entity.Descripcion,
                     entity.Ubicacion,
                     entity.Estado

@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\App\Departamentos\DepartamentosEdit.ts" />
     <Content Remove="wwwroot\App\Departamentos\DepartamentosGrid.ts" />
+    <Content Remove="wwwroot\App\Puestos\PuestosEdit.ts" />
     <Content Remove="wwwroot\App\Puestos\PuestosGrid.ts" />
+    <Content Remove="wwwroot\App\Titulos\TitulosEdit.ts" />
     <Content Remove="wwwroot\App\Titulos\TitulosGrid.ts" />
   </ItemGroup>
 
@@ -21,8 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\App\Departamentos\DepartamentosEdit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Departamentos\DepartamentosGrid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Puestos\PuestosEdit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Puestos\PuestosGrid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Titulos\TitulosEdit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Titulos\TitulosGrid.ts" />
   </ItemGroup>
 
